@@ -1,0 +1,11 @@
+version: '3'
+services:
+  cakephp-api:
+    build:
+      dockerfile: Dockerfile.php
+      context: .
+    container_name: cakephp-api
+    volumes:
+      - ./app:/var/www/html
+    ports:
+      - '8081:80'
